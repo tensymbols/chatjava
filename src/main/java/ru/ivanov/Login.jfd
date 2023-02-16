@@ -1,0 +1,47 @@
+JFDML JFormDesigner: "8.0.1.0.199" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp label2::l:p:98:p, comp label3::l:p:98:p, comp label1::l:p:64:p}, space :::p, par l {comp txtName:::p:308:p, comp txtIP:::p:308:p, comp txtPort:::p:106:p, comp btnSend::l:p::p}, space ::42:x}}"
+			"$verticalGroup": "par l {seq l {par l {comp label1:::p::p, comp txtName:::p::p}, space :::p, par l {comp txtIP:::p::p, comp label2:::p::p}, space :::p, par t {comp label3:::p::p, comp txtPort:::p::p}, space :p:52:p, comp btnSend:::p::p, space ::8:x}}"
+		} ) {
+			name: "this"
+			"resizable": false
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Name:"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtName"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "txtName", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "IP address:"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtIP"
+				"text": "127.0.0.1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Port:"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtPort"
+				"text": "7777"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnSend"
+				"text": "Less go"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnSend", false ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnSend", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 15, 30 )
+			"size": new java.awt.Dimension( 370, 210 )
+		} )
+	}
+}
